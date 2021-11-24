@@ -1,0 +1,79 @@
+.fixedButton {
+  position: fixed;
+  bottom: 50%;
+  right: -1.5%;
+  padding: 20px;
+  transform: rotate(270deg);
+}
+.roundedFixedBtn {
+  height: 0px;
+  line-height: 1px;
+  width: 100px;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 5%;
+  background-color: #496ddb;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.roundedFixedBtn:hover {
+  background-color: rgb(214, 214, 214);
+  color: black;
+}
+.tablebtn:hover {
+  background-color: rgb(214, 214, 214);
+  color: black;
+  border: 0px;
+}
+
+.fixedButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.fixedButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.fixedButton:hover span {
+  padding-right: 25px;
+}
+
+.fixedButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.fixedButton.open {
+  opacity: 1;
+  right: 6%;
+}
+
+.table {
+  position: fixed;
+  height: 10%;
+  width: 20%;
+  bottom: 50%;
+  right: -100%;
+  padding: 20px;
+  opacity: 1;
+}
+
+.table.open {
+  position: fixed;
+  height: 20%;
+  width: 10%;
+  bottom: 60%;
+  right: -1%;
+  padding: 20px;
+  opacity: 1;
+}

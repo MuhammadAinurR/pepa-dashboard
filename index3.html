@@ -16,6 +16,7 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="sideButton.css" />
+    <link rel="stylesheet" href="overlay.css" />
   </head>
 
   <body id="page-top">
@@ -58,6 +59,7 @@
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Menu:</h6>
               <a class="collapse-item" href="index.html">Penilaian Syarat Perlu</a>
+              <a class="collapse-item" href="index3.html">Penilaian Syarat Perlu</a>
               <a class="collapse-item" href="index2.html">Penilaian Pemantauan</a>
             </div>
           </div>
@@ -264,58 +266,162 @@
 
             <div class="row">
               <!-- Pie Chart -->
-              <div class="col-xl-4 col-lg-5">
+              <div class="col-xl-4 col-lg-6">
                 <div class="card shadow mb-4">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Jumlah Progra Studi Terakreditasi (Terpenuhi)</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Jumlah Mahasiswa</h6>
                     <div class="dropdown no-arrow">
                       <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                       </a>
                       <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header">Dropdown Header:</div>
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-header">Menu:</div>
+                        <a class="detailsButton1 dropdown-item" href="#">Details</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Download Data</a>
+                        <a class="dropdown-item" href="#">Download Chart</a>
                       </div>
                     </div>
                   </div>
                   <!-- Card Body -->
-                  <div class="card-body">
-                    <div class="chart-pie pt-4 pb-2">
-                      <div style="width: 100%; height: 40px; position: absolute; top: 50%; left: 0; margin-top: -20px; line-height: 19px; text-align: center; z-index: 999999999999999">
-                        <h1>100%</h1>
-                        <br />
-                        Total
-                      </div>
-                      <canvas id="myPieChart"></canvas>
-                    </div>
-                    <div class="mt-4 text-center small">
-                      <span class="mr-2"> <i class="fas fa-circle text-success"></i> Terakreditas </span>
-                      <span class="mr-2"> <i class="fas fa-circle text-danger"></i> Belum Terakreditasi </span>
-                    </div>
+                  <div class="card-body d-flex justify-content-center">
+                    <p class="text-success">Terpenuhi</p>
                   </div>
                 </div>
               </div>
-              <!-- Area Chart -->
-              <div class="col-xl-8 col-lg-7">
+
+              <div class="col-xl-4 col-lg-6">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Batas Maksimum Keterlibatan Dosen Tidak Tetap</h6>
+                    <div class="dropdown no-arrow">
+                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-header">Menu:</div>
+                        <a class="dropdown-item detailsButton" href="#">Details</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Download Data</a>
+                        <a class="dropdown-item" href="#">Download Chart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body d-flex justify-content-center">
+                    <p class="text-danger">Tidak Terpenuhi</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-4 col-lg-6">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Kecukupan jumlah dosen tetap pada saat TS</h6>
+                    <div class="dropdown no-arrow">
+                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-header">Menu:</div>
+                        <a class="dropdown-item" href="#">Details</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Download Data</a>
+                        <a class="dropdown-item" href="#">Download Chart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body d-flex justify-content-center">
+                    <p class="text-success">Terpenuhi</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-4 col-lg-6">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Rasio jumlah mahasiswa terhadap jumlah dosen tetap</h6>
+                    <div class="dropdown no-arrow">
+                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-header">Menu:</div>
+                        <a class="dropdown-item" href="#">Details</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Download Data</a>
+                        <a class="dropdown-item" href="#">Download Chart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body d-flex justify-content-center">
+                    <p class="text-success">Terpenuhi</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-4 col-lg-6">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Jumlah Lulusan</h6>
+                    <div class="dropdown no-arrow">
+                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-header">Menu:</div>
+                        <a class="dropdown-item detailsButton2" href="#">Details</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Download Data</a>
+                        <a class="dropdown-item" href="#">Download Chart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body d-flex justify-content-center">
+                    <p class="text-success">Terpenuhi</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-4 col-lg-6">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Jumlah Program Studi Terakreditasi</h6>
+                    <div class="dropdown no-arrow">
+                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-header">Menu:</div>
+                        <a class="dropdown-item" href="#">Details</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Download Data</a>
+                        <a class="dropdown-item" href="#">Download Chart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body d-flex justify-content-center">
+                    <p class="text-success">Terpenuhi</p>
+                  </div>
+                </div>
+              </div>
+              <div class="detailsItem1 col-12">
                 <div class="card shadow mb-4">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">Jumlah Mahasiswa (Terpenuhi)</h6>
                     <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header">Dropdown Header:</div>
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
+                      <button type="button" class="btn btn-danger closeButton">X</button>
                     </div>
                   </div>
                   <!-- Card Body -->
@@ -328,17 +434,12 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <!-- Content Row -->
-            <div class="row">
-              <!-- Content Column -->
-
-              <div class="col-lg-4 mb-4">
-                <!-- Project Card Example -->
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3">
+              <div class="detailsItem col-12 overlay">
+                <div class="kartu card shadow mb-4">
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-danger">Batas Maksimum Keterlibatan Dosen Tidak Tetap (Tidak Terpenuhi)</h6>
+
+                    <button type="button" class="btn btn-danger closeButton1">X</button>
                   </div>
                   <div class="card-body">
                     <h4 class="small font-weight-bold">Rasio jumlah dosen tetap terhadap jumlah program studi <span class="float-right">1 : 4.9</span></h4>
@@ -348,90 +449,13 @@
                     </div>
                   </div>
                 </div>
-
-                <!-- Pie Chart -->
-
-                <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Kecukupan jumlah dosen tetap pada saat TS (Terpenuhi)</h6>
-                    <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header">Dropdown Header:</div>
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Card Body -->
-                  <div class="card-body">
-                    <div class="chart-pie pt-4 pb-2">
-                      <div style="width: 100%; height: 40px; position: absolute; top: 15%; left: -15%; margin-top: -20px; line-height: 19px; text-align: center; z-index: 999999999999999">15%</div>
-                      <div style="width: 100%; height: 40px; position: absolute; top: 80%; left: 25%; margin-top: -20px; line-height: 19px; text-align: center; z-index: 999999999999999">85%</div>
-                      <canvas id="chartDosen"></canvas>
-                    </div>
-                    <div class="mt-4 text-center small">
-                      <span class="mr-2"> <i class="fas fa-circle text-success"></i> Jumlah Dosen Tetap </span>
-                      <span class="mr-2"> <i class="fas fa-circle text-danger"></i> Jumlah Dosen Tidak Tetap </span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Pie Chart -->
-
-                <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Rasio jumlah mahasiswa terhadap jumlah dosen tetap (Terpenuhi)</h6>
-                    <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header">Dropdown Header:</div>
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Card Body -->
-                  <div class="card-body">
-                    <div class="chart-pie pt-4 pb-2">
-                      <div style="width: 100%; height: 40px; position: absolute; top: 7%; left: 7%; margin-top: -20px; line-height: 19px; text-align: center; z-index: 999999999999999">6.6%</div>
-                      <div style="width: 100%; height: 40px; position: absolute; top: 80%; left: 25%; margin-top: -20px; line-height: 19px; text-align: center; z-index: 999999999999999">93.4%</div>
-                      <canvas id="chartMahasiswaDosen"></canvas>
-                    </div>
-                    <div class="mt-4 text-center small">
-                      <span class="mr-2"> <i class="fas fa-circle text-success"></i> Jumlah Dosen Tetap </span>
-                      <span class="mr-2"> <i class="fas fa-circle" style="color: #2bb9c3"></i> Jumlah Mahasiswa </span>
-                    </div>
-                  </div>
-                </div>
               </div>
-              <div class="col-lg-8 mb-4">
-                <div class="card shadow mb-4">
+              <div class="detailsItem2 col-12 overlay">
+                <div class="card shadow mb-4 kartu">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">Jumlah Lulusan (Terpenuhi)</h6>
-                    <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header">Dropdown Header:</div>
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </div>
+                    <div class="dropdown no-arrow"></div>
                   </div>
                   <!-- Card Body -->
                   <div class="card-body">
@@ -453,7 +477,7 @@
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Your Website 2021</span>
+              <span>Develop by Ainur</span>
             </div>
           </div>
         </footer>
@@ -508,10 +532,6 @@
     <script src="js/demo/chart-pie-dosen.js"></script>
 
     <div class="table">
-      <div class="d-flex flex-row-reverse">
-        <button type="button" class="tablebtn btn btn-danger">X</button>
-        <button type="button" class="tablebtn btn btn-primary">Table</button>
-      </div>
       <div class="card shadow">
         <div class="card-header py-3">
           <h6 class="m-0 font-weight-bold text-primary">Table</h6>
@@ -571,5 +591,6 @@
       <div class="menu-btn_burger"></div>
     </div>
     <script src="sideButton.js"></script>
+    <script src="overlay.js"></script>
   </body>
 </html>
